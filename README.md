@@ -1,5 +1,6 @@
 # Гагарин.Хак - Команда RCONNECT
 
+### BACKEND: [исходный код](https://github.com/)
 
 ## Рекмендуемое IDE
 
