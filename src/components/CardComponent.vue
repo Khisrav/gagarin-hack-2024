@@ -1,16 +1,18 @@
 <template>
     <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Мамин программист {{ title }}</h5>
+            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{{ title }}</h5>
         </a>
-        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline process on how to certify for your weekly benefits: {{ description }}</p>
+        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">{{ description }}</p>
         <div>
             <div class="font-bold">Hard skills</div>
-            <span v-for="hardskill in hardskills" class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">{{ hardskill }}</span>
+            <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">django</span>
+            <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">assembler</span>
         </div>
         <div>
             <div class="font-bold">Soft skills</div>
-            <span v-for="softskill in softskills" class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">{{ softskill }}</span>
+            <span class="bg-blue-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">английский</span>
+            <span class="bg-blue-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">командная работа</span>
         </div>
         <a href="#" class="inline-flex font-medium items-center text-blue-600 hover:underline mt-3">
             Перейти на курс
@@ -25,12 +27,7 @@
 import {cardData} from "@/core/card.js";
 
 export default {
-    props: {
-        title: String,
-        description: String,
-        hardskills: Object,
-        softskills: Object
-    },
+    props: ['title', 'description'],
     methods: {
       async getCardData() {
         try {
