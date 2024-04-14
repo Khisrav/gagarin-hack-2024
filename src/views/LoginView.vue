@@ -24,7 +24,7 @@ export default {
                 this.disableForm = false;
             }
         },
-        handleSuccessfulLogin(data) {
+        handleSuccessfulLogin() {
             localStorage.setItem('token', data.access);
             this.$router.push('/profile');
         },
