@@ -8,7 +8,7 @@ const api = axios.create({
 
 export const login = async (email, password) => {
   try {
-    const response = await api.post("/auth/login", { email, password });
+    const response = await api.post("/api/v1.0/users/auth/login", { email, password });
     return response.data;
   } catch (error) {
     throw error;
@@ -17,7 +17,7 @@ export const login = async (email, password) => {
 
 export const register = async (email, password, confirm_password) => {
   try {
-    const response = await api.post("/auth/register", { email, password, confirm_password });
+    const response = await api.post("/api/v1/users", { email, password, confirm_password });
     return response.data;
   } catch (error) {
     throw error;
@@ -27,7 +27,7 @@ export const register = async (email, password, confirm_password) => {
 export const logout = async (token) => {
   try {
     localStorage.removeItem('token');
-    const response = await api.post("/auth/logout", {}, { headers: { Authorization: `Bearer ${token}` } });
+    const response = await api.post("/users/auth/logout", {}, { headers: { Authorization: `Bearer ${token}` } });
     return response.data;
   } catch (error) {
     throw error;
@@ -36,7 +36,7 @@ export const logout = async (token) => {
 
 export const checkAuth = async (token) => {
   try {
-    const response = await api.post("/auth/check", {}, { headers: { Authorization: `Bearer ${token}` } });
+    const response = await api.post("/users/auth/check", {}, { headers: { Authorization: `Bearer ${token}` } });
     return response.data;
   } catch (error) {
     throw error;
