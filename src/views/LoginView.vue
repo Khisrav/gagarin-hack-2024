@@ -25,7 +25,7 @@ export default {
             }
         },
         handleSuccessfulLogin(data) {
-            localStorage.setItem('token', data.key);
+            localStorage.setItem('token', data.access);
             this.$router.push('/profile');
         },
         handleLoginError(error) {

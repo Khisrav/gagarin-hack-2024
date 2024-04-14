@@ -67,14 +67,14 @@ export default {
     },
     methods: {
         async register() {
-            if (this.user.password != this.user.confirm_password) {
+            if (this.user.password !== this.user.confirm_password) {
                 alert('Пароли не совпадают');
                 return;
             }
             this.disableForm = true;
             try {
                 const data = await register(this.user.email, this.user.password, this.user.confirm_password);
-                if (data.status == 201) {
+                if (data.status === 201) {
                     // localStorage.setItem('token', data.token);
                     this.showConfirmLayout = true
                 }
