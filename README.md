@@ -1,6 +1,6 @@
 # Гагарин.Хак - Команда RCONNECT
 
-### BACKEND: [исходный код](https://github.com/)
+### BACKEND: [исходный код](https://github.com/RolanIm/gagarin-hack-2024)
 
 ## Рекмендуемое IDE
 
