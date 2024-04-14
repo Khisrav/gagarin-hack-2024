@@ -61,6 +61,14 @@ const router = createRouter({
       }
     },
     {
+      path: '/events/:id', //можно получить значение через $route.params.id в компоненте 
+      name: 'event',
+      component: () => import('../views/EventView.vue'),
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
       path: '/roadmap',
       name: 'roadmap',
       component: () => import('../views/StepsView.vue'),
