@@ -26,5 +26,5 @@ npm run build
 npm run lint
 ```
 
-### Кастомизироватьт
+### Кастомизировать
 See [Configuration Reference](https://cli.vuejs.org/config/).
